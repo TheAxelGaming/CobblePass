@@ -1,0 +1,81 @@
+quests:
+  cobblemon_catch_any:
+    # Acción base (nuestro plugin registra "cobblemon_catch")
+    action: cobblemon_catch
+    # Cantidad requerida para completarla
+    required-progress: 10
+    # Puntos del BattlePass a otorgar
+    points: 100
+    item:
+      material: PLAYER_HEAD
+      name: "&e&lAtrápalos a todos"
+      lore:
+        - "&7Atrapa 10 Pokémon de cualquier especie."
+        - ""
+        - "&7Progreso: &e%progress% / %required_progress%" # Variables exactas solicitadas
+        - ""
+        - "&fRecompensa: &e100 Puntos"
+
+  cobblemon_catch_pikachu:
+    # Si quieres filtrar por una especie (en el código usamos .root(pokemonName)),
+    # añades el nombre del Pokémon justo después.
+    action: cobblemon_catch pikachu
+    required-progress: 1
+    points: 50
+    item:
+      material: PLAYER_HEAD
+      name: "&e&lPika Pika"
+      lore:
+        - "&7Atrapa 1 Pikachu."
+        - ""
+        - "&7Progreso: &e%progress% / %required_progress%"
+        - ""
+        - "&fRecompensa: &e50 Puntos"
+
+  cobblemon_craft_pc:
+    # Nuestra segunda misión detecta el namespace 'cobblemon:'.
+    # Para filtrar por un ítem específico de Cobblemon usa su nombre:
+    action: cobblemon_craft pc
+    required-progress: 1
+    points: 30
+    item:
+      material: CRAFTING_TABLE
+      name: "&b&lTecnología Pokémon"
+      lore:
+        - "&7Fabrica un PC de Cobblemon."
+        - ""
+        - "&7Progreso: &e%progress% / %required_progress%"
+        - ""
+        - "&fRecompensa: &e30 Puntos"
+
+  cobblemon_harvest_berry:
+    # Nuestra tercera misión detecta cuando se interactúa (click derecho) con una baya 
+    # MÁXIMAMENTE CRECIDA (madura).
+    # Soporta genéricamente 'cobblemon_berry', o puedes filtrar por 'berry_bush'/'apricorn_bush'.
+    action: cobblemon_berry
+    required-progress: 5
+    points: 20
+    item:
+      material: SWEET_BERRIES
+      name: "&d&lRecolectando Bayas o Bonguris"
+      lore:
+        - "&7Cosecha 5 bayas o bonguris maduros de Cobblemon."
+        - ""
+        - "&7Progreso: &e%progress% / %required_progress%"
+        - ""
+        - "&fRecompensa: &e20 Puntos"
+
+  cobblemon_battle_win:
+    # Nuestra nueva misión detecta cuando el jugador es el ganador de un combate Pokémon.
+    action: cobblemon_battle
+    required-progress: 3
+    points: 150
+    item:
+      material: IRON_SWORD
+      name: "&c&lMaestro Pokémon"
+      lore:
+        - "&7Gana 3 combates Pokémon."
+        - ""
+        - "&7Progreso: &e%progress% / %required_progress%"
+        - ""
+        - "&fRecompensa: &e150 Puntos"

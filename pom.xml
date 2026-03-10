@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jacksonalejandro</groupId>
+    <artifactId>CobblePass</artifactId>
+    <version>1.0.2</version>
+    <packaging>jar</packaging>
+
+    <name>CobblePass</name>
+    <description>Addon to integrate Cobblemon and BattlePass</description>
+
+    <properties>
+        <java.version>21</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <repositories>
+        <!-- Spigot Repository -->
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- Spigot API -->
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.21.1-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>1.9.22</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- BattlePass Local JAR -->
+        <dependency>
+            <groupId>com.advancedplugins</groupId>
+            <artifactId>battlepass</artifactId>
+            <version>5.0.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/battlepass.jar</systemPath>
+        </dependency>
+
+        <!-- Cobblemon Local JAR -->
+        <dependency>
+            <groupId>com.cobblemon</groupId>
+            <artifactId>cobblemon</artifactId>
+            <version>1.7.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/cobblemon.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Maven Compiler Plugin targeting Java 21 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

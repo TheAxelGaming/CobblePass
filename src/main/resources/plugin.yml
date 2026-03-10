@@ -1,0 +1,7 @@
+name: CobblePass
+version: 1.0.2
+main: com.jacksonalejandro.cobblepass.CobblePass
+api-version: '1.21'
+depend: [BattlePass]
+description: A BattlePass v5.0.5 Addon for Cobblemon features.
+authors: [Agent]
