@@ -2,7 +2,7 @@
 
 CobblePass is a Spigot/Arclight native Java Addon that registers custom quest types for the **Cobblemon** mod into **BattlePass** v5.0.5. It bridges the gap between Minecraft Pokémon tracking and your server's BattlePass progression system.
 
-## 🌟 Features
+##  Features
 
 This addon registers the `cobblemon` action prefix in BattlePass, allowing you to create the following quest types natively using the Developer API. We connect to the event listeners directly avoiding unnecessary Spigot/Fabric reflection.
 
@@ -31,7 +31,7 @@ This addon registers the `cobblemon` action prefix in BattlePass, allowing you t
   root: "oran_berry_bush" # Optional: specify the specific bush block name
   ```
 
-## 🛠️ Usage in Quests
+##  Usage in Quests
 
 In your quest lore or `lang.yml`, ensure you use these variables, which are natively supported for BattlePass variables:
 - `%progress%` - The current progress of the player in the quest.
@@ -50,7 +50,7 @@ quests:
       - "&7Progress: &e%progress% / %required_progress%"
 ```
 
-## ⚙️ Requirements
+##  Requirements
 
 - **Minecraft Server**: 1.21.1 (Arclight or compatible Hybrid server).
 - **Java**: 21
@@ -58,7 +58,7 @@ quests:
   - [Cobblemon 1.7.1](https://modrinth.com/mod/cobblemon)
   - BattlePass 5.0.5
 
-## 🏗️ Build from Source
+##  Build from Source
 
 This project uses **Maven** to build. Local dependencies (Cobblemon and BattlePass) are included in the `/libs` directory and imported via system paths.
 
